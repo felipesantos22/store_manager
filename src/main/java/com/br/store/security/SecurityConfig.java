@@ -23,7 +23,6 @@ public class SecurityConfig {
                         .permitAll()
                 )
                 .rememberMe(Customizer.withDefaults());
-
         return http.build();
     }
 }

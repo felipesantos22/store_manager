@@ -1,5 +1,6 @@
 package com.br.store.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,8 +16,8 @@ public class Product {
     private int id;
     @Column
     private String name;
-
     @ManyToOne
     @JoinColumn(name = "user_id")
+    @JsonIgnoreProperties("product")
     private User user;
 }
